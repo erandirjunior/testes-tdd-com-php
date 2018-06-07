@@ -1,6 +1,6 @@
 <?php
 
-require 'AvaliadorTest.php';
+require_once 'AvaliadorTest.php';
 
 $test = new AvaliadorTest();
 

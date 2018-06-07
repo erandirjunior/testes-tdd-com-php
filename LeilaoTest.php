@@ -1,8 +1,8 @@
 <?php
 
-require 'Usuario.php';
-require 'Lance.php';
-require 'Leilao.php';
+require_once 'Usuario.php';
+require_once 'Lance.php';
+require_once 'Leilao.php';
 
 class LeilaoTeste extends PHPUnit_Framework_TestCase
 {
