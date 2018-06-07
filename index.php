@@ -1,25 +1,13 @@
 <?php
 
-require 'Usuario.php';
-require 'Lance.php';
-require 'Leilao.php';
-require 'Avaliador.php';
+require 'AvaliadorTest.php';
 
-$leilao = new Leilao('Playstation 4');
+$test = new AvaliadorTest();
 
-$renan = new Usuario('Renan');
-$caio = new Usuario('Caio');
-$felipe = new Usuario('Felipe');
+$test->test();
 
-$leilao->propoe(new Lance($renan, 400));
-$leilao->propoe(new Lance($caio, 350));
-$leilao->propoe(new Lance($felipe, 250));
-
-$leiloeiro = new Avaliador();
-$leiloeiro->avalia($leilao);
-
-$maiorEsperado = 400;
-$menorEsperado = 250;
-
-var_dump($leiloeiro->getMaiorLance() === $maiorEsperado);
-var_dump($leiloeiro->getMenorLance() === $menorEsperado);
+/*
+1 - Instalar phpunit
+2 - rodor o comando phpunit AvaliadorTest.php para testar o código 
+3 - rodor o comando phpunit --color  AvaliadorTest.php para rodar o teste e exbir o resultado colorido
+*/
