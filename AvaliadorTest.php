@@ -98,4 +98,14 @@ class AvaliadorTest extends PHPUnit_Framework_TestCase
 		$this->assertEquals(400, $this->leiloeiro->getMaiores()[1]->getValor());
 		$this->assertEquals(300, $this->leiloeiro->getMaiores()[2]->getValor());
 	}
+
+	/**
+	 * @expectedException InvalidArgumentException
+	 */
+	public function testDeveRecusarLeilaoSemLances()
+	{
+		$construtor = new ConstrutorDeLeilao();
+		$leilao = $construtor->para('Playstation 4')->constroi();
+		$this->leiloeiro->avalia($leilao);
+	}
 }
